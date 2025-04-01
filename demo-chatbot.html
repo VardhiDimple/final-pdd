@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full-Screen Chatbase Chatbot</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #ffd1dc 0%, #ffe4e9 100%);
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        #chatbase-container {
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="chatbase-container"></div>
+
+    <script>
+        (function() {
+            const script = document.createElement("script");
+            script.src = "https://www.chatbase.co/embed.min.js";
+            script.id = "HHB6Gm__pQWPPYvEtn_vd";  // Replace with your actual Chatbase bot ID
+            script.domain = "www.chatbase.co";
+            script.onload = function() {
+                setTimeout(() => {
+                    if (window.chatbase) {
+                        window.chatbase("open", { container: "#chatbase-container" }); // Open in full screen
+                    }
+                }, 2000); // Auto-open with delay
+            };
+            document.body.appendChild(script);
+        })();
+    </script>
+
+</body>
+</html>

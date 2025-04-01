@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRUGTOX PRO</title>
+    <style>
+        /* General Page Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            overflow: hidden;
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4, #ffdde1);
+            background-size: 400% 400%;
+            animation: gradientAnimation 10s ease infinite;
+        }
+
+        /* Animated Background */
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: rgb(14, 14, 14);
+        }
+
+        /* Logo Image */
+        .logo {
+            width: 250px;
+            height: auto;
+            margin-bottom: 20px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        /* Typing Animation */
+        .slogan {
+            font-size: 28px;
+            font-weight: bold;
+            font-style: italic;
+            color: #333;
+            margin-bottom: 20px;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 3px solid #333;
+            display: inline-block;
+            width: 0;
+            animation: typing 3s steps(40, end) forwards, blink 0.8s infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+
+        /* Floating Button */
+        .button {
+            background-color: #007BFF;
+            color: white;
+            padding: 15px 30px;
+            font-size: 20px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 10px 20px rgba(0, 123, 255, 0.4);
+            position: relative;
+            transition: all 0.3s ease-in-out;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        /* Floating Animation */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* Button Ripple Effect */
+        .button::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 10%, transparent 10%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            transition: transform 0.5s ease-out;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+            transform: scale(1.1);
+        }
+
+        .button:hover::before {
+            transform: translate(-50%, -50%) scale(3);
+        }
+
+        /* Pop-up Effect */
+        .hero {
+            opacity: 0;
+            transform: scale(0.9);
+            animation: popUp 1s ease-out forwards;
+        }
+
+        @keyframes popUp {
+            0% { opacity: 0; transform: scale(0.9); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <img src="logo.jpg" alt="DRUGTOX PRO Logo" class="logo">
+       
+        <button class="button" onclick="window.location.href='https://vardhidimple-final-drugtox-pro-test-xaog4c.streamlit.app/'">
+            Go to DRUGTOX PRO
+        </button><hr>
+        <button class="button" onclick="window.location.href='demo-chatbot.html'">
+            Go to CHATBOT-AI
+        </button>
+        
+    </div>
+
+</body>
+</html>
