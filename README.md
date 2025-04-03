@@ -32,8 +32,7 @@ Visualization: Matplotlib, Seaborn, and Pandas
 
 1️⃣ Clone the Repository
 
-git clone https://github.com/yourusername/DrugToxPro.git
-cd DrugToxPro
+git clone https://github.com/VardhiDimple/final-pdd
 
 2️⃣ Install Dependencies
 
